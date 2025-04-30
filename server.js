@@ -75,7 +75,7 @@ app.post('/api/form', async (req, res) => {
       savedToGoogleSheets: sheetUpdated,
       id: newForm._id
     });
-
+    
   } catch (error) {
     console.error('❌ Server error:', error);
     res.status(500).json({ 
@@ -88,7 +88,5 @@ app.post('/api/form', async (req, res) => {
 app.get('/', (req, res) => {
   res.send('✅ Backend is up and running!');
 });
-
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
