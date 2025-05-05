@@ -21,7 +21,7 @@ const formSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: String,
   phone: { type: String, required: true },
-  cetPercentile:  type: String,
+  cetPercentile:  String,
   gradeLevel: String,
   caste: { 
     type: String, 
