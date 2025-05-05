@@ -21,7 +21,7 @@ const formSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: String,
   phone: { type: String, required: true },
-  cetPercentile: { type: String, required: true },
+  cetPercentile:  type: String,
   gradeLevel: String,
   caste: { 
     type: String, 
@@ -54,7 +54,7 @@ const updateGoogleSheet = async (formData) => {
 app.post('/api/form', async (req, res) => {
   try {
     // Validate required fields
-    const required = ['firstName', 'lastName', 'phone', 'cetPercentile', 'caste'];
+    const required = ['firstName', 'lastName', 'phone',  'caste'];
     const missing = required.filter(field => !req.body[field]);
     if (missing.length) {
       return res.status(400).json({ 
